@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 631px;
+  height: 52px;
+  background-color: #5a5c66;
+  padding-right: 19px;
+}
+.input {
+  display: block;
+  width: 100%;
+  background-color: #5a5c66;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 14px;
+  font-family: 'Roboto';
+  padding: 0 19px 0 30px;
+}
+::placeholder {
+  color: #b2b7bf;
+}

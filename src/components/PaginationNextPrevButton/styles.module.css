@@ -1,0 +1,12 @@
+.container {
+  position: relative;
+  font-family: 'Roboto';
+  font-size: 24px;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+}
+.container:active {
+  top: 1px;
+  left: 1px;
+}
