@@ -10,10 +10,9 @@ const MainContainer = () => {
   const navigate = useNavigate()
   const currentPage = useSelector((state) => state.appState.currentPage)
 
-  useEffect(() => {
-    navigate(`/${currentPage}`)
-  }, [currentPage, navigate])
-  useEffect(() => {})
+  // useEffect(() => {
+  //   navigate(`/${currentPage}`)
+  // }, [currentPage, navigate])
 
   return (
     <div className={styles.container}>
