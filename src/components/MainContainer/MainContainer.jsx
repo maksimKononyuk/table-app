@@ -11,14 +11,14 @@ const MainContainer = () => {
   const currentPage = useSelector((state) => state.appState.currentPage)
 
   useEffect(() => {
-    navigate(`/table-app/${currentPage}`)
+    navigate(`/${currentPage}`)
   }, [currentPage, navigate])
 
   return (
     <div className={styles.container}>
       <div>
         <SearchBlock />
-        {/* <Table /> */}
+        <Table />
       </div>
       <PaginationBlock />
     </div>

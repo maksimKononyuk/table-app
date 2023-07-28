@@ -9,7 +9,7 @@ function App() {
         <Routes>
           <Route path='/*'>
             <Route index element={<MainContainer />} />
-            <Route path={'table-app/:page'} element={<MainContainer />} />
+            <Route path={':page'} element={<MainContainer />} />
           </Route>
         </Routes>
       </BrowserRouter>
