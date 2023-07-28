@@ -29,7 +29,7 @@ const Table = () => {
             if (data && data[index]) {
               return (
                 <tr key={index}>
-                  <td>{data[index].id}</td>
+                  <td className={styles.idTitle}>{data[index].id}</td>
                   <td>{data[index].title}</td>
                   <td>{data[index].body}</td>
                 </tr>
