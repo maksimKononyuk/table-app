@@ -7,12 +7,12 @@ import Table from '../Table/Table'
 import styles from './styles.module.css'
 
 const MainContainer = () => {
-  // const navigate = useNavigate()
-  // const currentPage = useSelector((state) => state.appState.currentPage)
+  const navigate = useNavigate()
+  const currentPage = useSelector((state) => state.appState.currentPage)
 
-  // useEffect(() => {
-  //   navigate(`/${currentPage}`)
-  // }, [currentPage, navigate])
+  useEffect(() => {
+    navigate(`/table-app/${currentPage}`)
+  }, [currentPage, navigate])
 
   return (
     <div className={styles.container}>
