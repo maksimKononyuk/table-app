@@ -18,7 +18,7 @@ const MainContainer = () => {
     <div className={styles.container}>
       <div>
         <SearchBlock />
-        <Table />
+        {/* <Table /> */}
       </div>
       <PaginationBlock />
     </div>
