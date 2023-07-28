@@ -6,6 +6,11 @@
   cursor: pointer;
   user-select: none;
 }
+@media (max-width: 628px) {
+  .container {
+    font-size: 18px;
+  }
+}
 .container:active {
   top: 1px;
   left: 1px;

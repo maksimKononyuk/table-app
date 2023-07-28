@@ -12,6 +12,11 @@ li {
   cursor: pointer;
   user-select: none;
 }
+@media (max-width: 628px) {
+  li {
+    font-size: 14px;
+  }
+}
 li:active {
   top: 1px;
   left: 1px;

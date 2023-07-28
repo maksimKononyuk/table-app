@@ -3,4 +3,10 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 46px 19px;
+  flex-wrap: wrap;
+}
+@media (max-width: 628px) {
+  .container {
+    padding: 0 0 19px;
+  }
 }
