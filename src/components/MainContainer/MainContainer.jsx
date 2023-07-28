@@ -11,7 +11,7 @@ const MainContainer = () => {
   const currentPage = useSelector((state) => state.appState.currentPage)
 
   useEffect(() => {
-    navigate(`/${currentPage}`)
+    navigate(`/table-app/${currentPage}`)
   }, [currentPage, navigate])
 
   return (
