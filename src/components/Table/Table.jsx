@@ -1,7 +1,8 @@
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { getData, setCurrentData } from '../../state/appStateSlice'
+import { getData } from '../../state/appStateSlice'
 import styles from './style.module.css'
+import TableHeadCollumn from '../TableHeadCollumn/TableHeadCollumn'
 
 const Table = () => {
   const dispath = useDispatch()
@@ -9,34 +10,6 @@ const Table = () => {
   useEffect(() => {
     dispath(getData())
   }, [dispath])
-
-  const sortData = (property) => {
-    const sortArr = [...data]
-    sortArr.sort((a, b) => {
-      if (typeof a[property] === 'number') {
-        return b[property] - a[property]
-      }
-      return a[property].localeCompare(b[property])
-    })
-    dispath(setCurrentData(sortArr))
-  }
-
-  const clichHandler = (e) => {
-    const property = e.target.textContent
-    switch (property) {
-      case 'ID':
-        sortData('id')
-        return
-      case 'Заголовок':
-        sortData('title')
-        return
-      case 'Описание':
-        sortData('body')
-        return
-      default:
-        return
-    }
-  }
 
   return (
     <div className={styles.container}>
@@ -48,9 +21,9 @@ const Table = () => {
         </colgroup>
         <tbody>
           <tr>
-            <th onClick={clichHandler}>ID</th>
-            <th onClick={clichHandler}>Заголовок</th>
-            <th onClick={clichHandler}>Описание</th>
+            <TableHeadCollumn title={'ID'} />
+            <TableHeadCollumn title={'Заголовок'} />
+            <TableHeadCollumn title={'Описание'} />
           </tr>
           {Array.from(Array(10)).map((_, index) => {
             if (data && data[index]) {

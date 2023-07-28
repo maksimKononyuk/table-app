@@ -14,6 +14,7 @@ const MainContainer = () => {
     navigate(`/${currentPage}`)
   }, [currentPage, navigate])
   useEffect(() => {})
+
   return (
     <div className={styles.container}>
       <div>
