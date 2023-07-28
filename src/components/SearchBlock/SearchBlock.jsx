@@ -44,7 +44,6 @@ const SearchBlock = () => {
     if (search) {
       dispatch(setCurrentData([search]))
     }
-    console.log(value)
     if (!value) {
       dispatch(setCurrentData(currentDataSave))
     }
