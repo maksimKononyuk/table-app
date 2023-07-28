@@ -1,9 +1,16 @@
+import { useSelector, useDispatch } from 'react-redux'
+import { setCurrentPage } from '../../state/appStateSlice'
 import styles from './styles.module.css'
 
-const PaginationPageNumbers = ({ countOfPages = 5, currentPage = 1 }) => {
+const PaginationPageNumbers = () => {
+  const dispatch = useDispatch()
+  const countOfPages = useSelector((state) => state.appState.countOfPages)
+  const currentPage = useSelector((state) => state.appState.currentPage)
+
   const clickHandler = (index) => {
-    console.log('Был выполене клик по кнопке', index)
+    dispatch(setCurrentPage(index))
   }
+
   return (
     <div className={styles.container}>
       <ul>
